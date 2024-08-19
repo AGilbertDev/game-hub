@@ -26,7 +26,7 @@ const PlatformIconList = ({ platforms }: Props) => {
 	return (
 		<HStack marginY={1}>
 			{platforms.map((platform) => (
-				<Icon as={iconMap[platform.slug]} color="gray.500" fontSize={platform.slug === "nintendo" ? "6xl" : "2xl"} /> // Different size for Nintendo because the icon is smaller.
+				<Icon key={platform.id} as={iconMap[platform.slug]} color="gray.500" fontSize={platform.slug === "nintendo" ? "6xl" : "2xl"} /> // Different size for Nintendo because the icon is smaller.
 			))}
 		</HStack>
 	);
